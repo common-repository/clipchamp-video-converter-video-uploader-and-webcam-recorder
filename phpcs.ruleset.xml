@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<ruleset name="WordPress Coding Standards for Clipchamp">
+
+	<rule ref="WordPress-Extra" />
+
+	<rule ref="WordPress-Extra">
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores" />
+		<exclude name="WordPress.WhiteSpace.PrecisionAlignment.Found" />
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.ValidVariableName">
+		<properties>
+			<!-- Properties from an extended Gravity Forms class -->
+			<property name="customPropertiesWhitelist" type="array" value="buttonSize,buttonLabel" />
+		</properties>
+	</rule>
+
+	<exclude-pattern>*.ruleset</exclude-pattern>
+	<exclude-pattern>*/tests/*</exclude-pattern>
+	<exclude-pattern>*/lang/*</exclude-pattern>
+	<exclude-pattern>*/includes/*</exclude-pattern>
+
+</ruleset>
